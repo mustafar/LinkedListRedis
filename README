@@ -1,0 +1,24 @@
+Linked List over Redis
+----------------------
+
+What is it?
+- A linked list caching structure using Redis for storage
+- in Python
+- Big Os
+	- Insert: O(1)
+	- Read: O(n)
+	- Delete: O(n)
+- List grows on inserts and decays as keys expire. 
+  The list shrinks when it is scanned to search for a key.
+  All nodes encountered having an expired key are deleted.
+  
+Usage
+- Obj init: LinkedListRedis(url='localhost', port=6379)
+- Set: obj.set (key, val, ttl=60sec)
+- Get: obj.get (key)
+- Delete: obj.dele (key)
+- stats: obj.stats() - dumps some stats
+
+This is a dumb project
+- because it is built over Redis which is O(1) everything
+- who really needs a linked list?
