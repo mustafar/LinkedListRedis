@@ -1,7 +1,8 @@
 Linked List over Redis
-----------------------
+======================
 
 What is it?
+-----------
 - A linked list caching structure using Redis for storage
 - in Python
 - Big Os
@@ -12,7 +13,13 @@ What is it?
   The list shrinks when it is scanned to search for a key.
   All nodes encountered having an expired key are deleted.
   
+Dependencies
+------------
+- Redis: http://redis.io/
+- redis-py: https://github.com/andymccurdy/redis-py
+
 Usage
+-----
 - Obj init: LinkedListRedis(url='localhost', port=6379)
 - Set: obj.set (key, val, ttl=60sec)
 - Get: obj.get (key)
@@ -20,5 +27,6 @@ Usage
 - stats: obj.stats() - dumps some stats
 
 This is a dumb project
+----------------------
 - because it is built over Redis which is O(1) everything
 - who really needs a linked list?
