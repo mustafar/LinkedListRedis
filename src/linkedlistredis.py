@@ -23,7 +23,7 @@ class LinkedListRedis:
 		self.__head = False
 		self.__tail = False
 
-        def set(self, k, v, ttl=1):
+        def set(self, k, v, ttl=60):
                 n = node (k, False)
                 if (self.__head == False):
                         self.__head = n
