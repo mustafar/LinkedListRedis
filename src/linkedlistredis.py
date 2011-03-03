@@ -1,5 +1,5 @@
 import redis
-import time
+
 
 class node:
 	def __init__(self, thisKey, next):
